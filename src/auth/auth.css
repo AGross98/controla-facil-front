@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  background-color: #f4f6fa;
+  overflow-y: scroll;
+}
+
+.login {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../img/background_login.jpg");
+  background-size: cover;
+}
+
+
+.form-container {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Alinha os elementos em uma coluna */
+  align-items: center; /* Alinha os elementos horizontalmente */
+  text-align: center; /* Alinha o texto ao centro */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left; /* Alinha o texto do label à esquerda */
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

@@ -1,13 +1,13 @@
 // src/SignUp.js
 import React, { useState } from "react";
-import "./Login.css";
+import "./auth.css";
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignUp = async () => {};
+  const authenticate = async () => {};
 
   return (
     <div className="login">
@@ -38,7 +38,7 @@ const SignUp = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </label>
-          <button type="button" onClick={handleSignUp}>
+          <button type="button" onClick={authenticate}>
             Cadastrar
           </button>
         </form>

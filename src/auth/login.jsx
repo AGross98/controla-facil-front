@@ -6,9 +6,8 @@ const Login = () => {
   const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
 
-  const logar = async () => {
+  const authenticate = async () => {
     try {
-      console.log("usuario ->", usuario, "Senha ->", senha);
       const response = await fetch("http://localhost:5000/users/login/", {
         method: "POST",
         headers: {
@@ -24,9 +23,11 @@ const Login = () => {
         console.log("Login bem-sucedido!");
       } else {
         console.error("Falha no login");
+        alert("Usuário ou senha incorretos. Por favor, tente novamente.");
       }
     } catch (error) {
       console.error("Erro ao fazer login:", error);
+      alert("Erro inesperado!");
     }
   };
 
@@ -36,26 +37,26 @@ const Login = () => {
         <h2>Login</h2>
         <form>
           <label>
-            Usuário:
             <input
               type="text"
               value={usuario}
               onChange={(e) => setUsuario(e.target.value)}
+              placeholder="Digite seu usuário"
             />
           </label>
           <label>
-            Senha:
             <input
               type="password"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
+              placeholder="Digite sua senha"
             />
           </label>
-          <button type="button" onClick={logar}>
-            Login
+          <button type="button" onClick={authenticate}>
+            Entrar
           </button>
         </form>
-        <Link to="/CadastroUsuario">Cadastre-se</Link>
+        <Link to="/register">Cadastre-se</Link>
       </div>
     </div>
   );

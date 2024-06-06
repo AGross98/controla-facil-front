@@ -1,5 +1,4 @@
-import "./Lancamentos.css";
-
+import "./entry.css";
 
 let lancamentos = [
   {
